@@ -1,0 +1,42 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:   #0A2D5E;
+  --teal:   #1ABEBC;
+  --white:  #FFFFFF;
+  --gray:   #F4F7FB;
+  --text:   #1a1a2e;
+  --muted:  #6b7a99;
+  --border: #e2e8f0;
+  --shadow: 0 8px 40px rgba(10,45,94,0.10);
+  --radius: 16px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--gray);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+@keyframes progress {
+  0%   { width: 0%; }
+  20%  { width: 30%; }
+  50%  { width: 60%; }
+  80%  { width: 85%; }
+  100% { width: 95%; }
+}
