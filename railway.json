@@ -1,8 +1,24 @@
 {
   "build": {
-    "builder": "nixpacks"
+    "builder": "nixpacks",
+    "buildCommand": "pip install -r requirements.txt"
   },
   "deploy": {
-    "startCommand": "cd backend && python main.py"
+    "startCommand": "python main.py"
   }
 }
+```
+
+Commit it → Railway will auto-redeploy.
+
+---
+
+## Also add a `runtime.txt` file in the `backend/` folder
+
+Go to GitHub → click into `backend/` folder → **Add file** → **Create new file**
+
+Filename: `runtime.txt`
+
+Content:
+```
+python-3.11
